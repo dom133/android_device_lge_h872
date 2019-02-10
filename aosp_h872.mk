@@ -18,15 +18,18 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit some common AOSP stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common AEX stuff.
+$(call inherit-product, vendor/aosp/common.mk)
 
 # Inherit from h872 device
 $(call inherit-product, device/lge/h872/device.mk)
 
+# Boot animation res
+TARGET_BOOT_ANIMATION_RES := 1080
+
 # Set those variables here to overwrite the inherited values.
 PRODUCT_DEVICE := h872
-PRODUCT_NAME := lineage_h872
+PRODUCT_NAME := aosp_h872
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := LG-H872
 PRODUCT_MANUFACTURER := LGE
