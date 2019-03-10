@@ -29,5 +29,10 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 536870912
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 5863636992
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 24595398656
 
+# Use Gapps
+WITH_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+
 # inherit from the proprietary version
 -include vendor/lge/h872/BoardConfigVendor.mk
